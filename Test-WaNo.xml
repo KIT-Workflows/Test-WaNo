@@ -1,0 +1,68 @@
+<WaNoTemplate>
+
+   <WaNoMeta>
+      <Author>
+         <Name> Celso R. C. Rego </Name>
+         <Email>celsorego@kit.edu</Email>
+      </Author>
+
+      <Description>
+         This WaNo shows the most used functionalities available within the SimStack workflow framework.
+      </Description>
+
+      <Keyword>Test</Keyword>
+  </WaNoMeta>
+
+   <WaNoRoot name="Test-WaNo">
+      
+      <WaNoFloat name="Float-var-0">50.0</WaNoFloat>
+      <WaNoInt name="Int-var-0">20</WaNoInt>
+      <WaNoString name="String-0">string</WaNoString>
+
+      <WaNoMultipleOf  name="MultipleOf">
+         <Element id="0">          
+           <WaNoFloat name="Float-var-1">0.1</WaNoFloat>
+           <WaNoInt name="Int-var-1">5</WaNoInt>
+            <WaNoString name="String-1">x-string</WaNoString>
+         </Element>
+      </WaNoMultipleOf>
+
+      <WaNoDropDown name="DropDown-list">
+         <Entry id="0" chosen="True">option-0</Entry>
+         <Entry id="1">option-1</Entry>
+         <Entry id="2">option-2</Entry>
+      </WaNoDropDown>
+
+      <WaNoDictBox name="simple-Dictbox">
+         <WaNoInt name="start">1</WaNoInt>
+         <WaNoInt name="stop">60</WaNoInt>
+         <WaNoInt name="step">2</WaNoInt>	
+      </WaNoDictBox>
+      
+      <WaNoFile logical_filename="file_1" name="file-1">path to file1</WaNoFile>
+
+      <WaNoBool name="Conditional-DictBox">False</WaNoBool>
+      <WaNoDictBox visibility_condition="%s == True" visibility_var_path="Conditional-DictBox" name="DictBox-name">
+         <WaNoBool name="condition-0">False</WaNoBool>  
+         <WaNoString visibility_condition="%s == True" visibility_var_path="DictBox-name.condition-0" name="Input string variable">string</WaNoString>
+         <WaNoBool name="condition-1">False</WaNoBool> 
+         <WaNoFile visibility_condition="%s == True" visibility_var_path="DictBox-name.condition-1" logical_filename="file_2" name="Load the file">path to file2</WaNoFile> 
+      </WaNoDictBox>
+
+   </WaNoRoot>
+   <WaNoExecCommand>
+      export NANOVER=V4
+	   source $NANOMATCH/$NANOVER/local_anaconda/bin/activate
+	   conda activate simstack_kit
+		python test-script.py
+   </WaNoExecCommand>
+   
+   <WaNoInputFiles> 
+      <WaNoInputFile logical_filename="test-script.py">test-script.py</WaNoInputFile> 
+      <WaNoInputFile logical_filename="report_template.body">report_template.body</WaNoInputFile>
+   </WaNoInputFiles>
+   
+   <WaNoOutputFiles>
+      <WaNoOutputFile>figure.png</WaNoOutputFile>
+   </WaNoOutputFiles>
+</WaNoTemplate>
