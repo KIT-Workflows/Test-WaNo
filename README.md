@@ -15,6 +15,16 @@ To get this WaNo up running on your available computational resources, make sure
 3. yaml, sys. 
 ```
 
+The python scripts run with the `simstack_kit` conda environment as defined in the `WaNoExecCommand`tag. 
+```
+export NANOVER=V4
+source $NANOMATCH/$NANOVER/local_anaconda/bin/activate
+conda activate simstack_kit
+python test-script.py
+```
+Other local environments are allowed but have to be changed accordingly in the respective tag of the `Test-WaNo.xml` file.
+
+
 ## 2. Test-WaNo Inputs files 
 - **file-1**:  is the mandatory file required by this WaNo, as a test case you can use the *dummy_file* of this repo.
 - **Load the file**: is only mandatory if the bool variable `Conditional-DictBox` is set to be `True`.
