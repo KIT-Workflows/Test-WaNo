@@ -4,7 +4,7 @@ The Test-WaNo WaNo implements the most used functionalities available within the
 
 <img src="Test-WaNo-GUI.png" alt="drawing" width="700"/>
 
-Figure 1 displays the most used functionalities available within the SimStack workflow framework. The arrows associate the tags used to generate the field and variable types. The **DictBox-name** only popup when the bool variable *Conditional-DictBox* is *True*. 
+Figure 1 displays the most used functionalities available within the SimStack workflow framework. The arrows associate the tags used to generate the field and variable types. The **DictBox-name** only popup when the bool variable `Conditional-DictBox` is `True`. 
 
 ## 1. Python Setup
 To get this WaNo up running on your available computational resources, make sure to have the below libraries installed on Python 3.6 or newer.
