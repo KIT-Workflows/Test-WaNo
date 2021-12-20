@@ -10,12 +10,12 @@ Figure 1 displays the most used functionalities available within the SimStack wo
 To get this WaNo up running on your available computational resources, make sure to have the below libraries installed on Python 3.6 or newer.
 
 ```
-1. Atomic Simulation Environment (ASE).
-2. Python Materials Genomics (Pymatgen).
-3. subprocess, glob, os, sys, yaml. 
+1. matplotlib.
+2. numpy.
+3. yaml, sys. 
 ```
 
-## 2. DFT-Turbomole Inputs files 
+## 2. Test-WaNo Inputs files 
 - **Follow-up calculation**: This option performs calculations from previous simulations.
 - **Title**: Name the structure in the `control` file.
 - **Molecule structure**: Here the user can define the input geometry format and load the structure input file.
