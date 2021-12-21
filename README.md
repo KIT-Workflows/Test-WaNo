@@ -1,3 +1,5 @@
+When publishing results obtained with Test-WaNo, please consider citing it. [![DOI](https://zenodo.org/badge/440164995.svg)](https://zenodo.org/badge/latestdoi/440164995)
+
 # Test-WaNo
 
 The Test-WaNo WaNo implements the most used functionalities available within the SimStack workflow framework to define the inputs fields of the Graphical User Interface(GUI). Here we are covering the following set of Simstack features: `WaNoFloat`, `WaNoInt`, `WaNoString`, `WaNoDropDown`,`WaNoDictBox`, `WaNoFile`, `WaNoMultipleOf`, and conditional options using the `WaNoBool`tag. All the remaining input files are loaded from an external source.
