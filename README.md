@@ -35,4 +35,5 @@ Other local environments are allowed but have to be changed accordingly in the r
    - The `figure.png` image is the mandatory output of this WaNo
 ## 4. Report
    - By clicking the right mouse button on the executed workflow folder, we can choose the report option to display our pre-defined report. In this example we sjuld see  
+   <img src="report.png" alt="drawing" width="700"/>
 
