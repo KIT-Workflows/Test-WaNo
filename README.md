@@ -37,7 +37,7 @@ Other local environments are allowed but have to be changed accordingly in the r
    - By clicking the right mouse button on the executed workflow folder, we can choose the report option to display the pre-defined `.html` file. Below we show the outcome of this file, which exhibits the title **Test-Report**, some information about the output of the WaNo (blue). It prints out all the inputs of the WaNo, and plot a figure by using the python script `test-script.py`.     
    <img src="Report.png" alt="drawing" width="700"/>
 
-## 5. License & copyright
-@ Celso R. C. Rêgo
+## License & copyright
+© Celso R. C. Rêgo
 Licensed under the [MIT License](LICENSE).
 
