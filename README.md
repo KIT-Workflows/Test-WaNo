@@ -4,29 +4,35 @@ The Test-WaNo WaNo implements the most used functionalities available within the
 
 <img src="Test-WaNo-GUI.png" alt="drawing" width="700"/>
 
-Figure 1 displays the Turbomole flags, where we can name the calculation and define the following field of parameters: `Molecular structure`, `Basis set`, `initial guess`, `DFT options` and `Type of calculation`.
+Figure 1 displays the most used functionalities available within the SimStack workflow framework. The arrows associate the tags used to generate the field and variable types. The **DictBox-name** only popup when the bool variable `Conditional-DictBox` is `True`. 
 
 ## 1. Python Setup
 To get this WaNo up running on your available computational resources, make sure to have the below libraries installed on Python 3.6 or newer.
 
 ```
-1. Atomic Simulation Environment (ASE).
-2. Python Materials Genomics (Pymatgen).
-3. subprocess, glob, os, sys, yaml. 
+1. matplotlib.
+2. numpy.
+3. yaml, sys. 
 ```
 
-## 2. DFT-Turbomole Inputs files 
-- **Follow-up calculation**: This option performs calculations from previous simulations.
-- **Title**: Name the structure in the `control` file.
-- **Molecule structure**: Here the user can define the input geometry format and load the structure input file.
-- **Basis set**: Here the user can choose the basis set type.
-- **Initial guess**: In this box, we set up the initial charge and multiplicities of the system.
-- **DFT options**: This box sets up the basic DFT parameters, such as the maximum number of self-consistent steps, exchange-correlation functional, integration grid, van-der-Waals corrections, and solvation effects(treated by the COSMO). 
-- **Type of calculation**: Here the user can perform Structure optimization, Excited states (TDDFT), and frequency (vibrational states) calculations. 
-- 
-## 3. DFT-Turbomole Output files 
-   - results.tar.xz (contains all the following files: `alpha`,`auxbasis`, `basis`,`beta`,`control`,`coord`,`energy`,`forceapprox`,`gradient`,`hessapprox`,`mos`,`optinfo`,`rendered_wano.yml`,`sing_a`,`trip_a`,`unrs_a`)
-   - turbomole_results.yml (contains some info like energy value, energy unit, the title of the structure, and the Homo-Lumo gap of the system).
-   - final_structure.xyz (final structure after the calculation)
+The python scripts run with the `simstack_kit` conda environment defined in the `WaNoExecCommand` tag as shown below. 
+```
+<WaNoExecCommand>
+   export NANOVER=V4
+   source $NANOMATCH/$NANOVER/local_anaconda/bin/activate
+   conda activate simstack_kit
+   python test-script.py
+</WaNoExecCommand>
+```
+Other local environments are allowed but have to be changed accordingly in the respective tag of the `Test-WaNo.xml` file.
 
+
+## 2. Test-WaNo Inputs files 
+- **file-1**:  is the mandatory file required by this WaNo, as a test case you can use the *dummy_file* of this repo.
+- **Load the file**: is only mandatory if the bool variable `Conditional-DictBox` is set to be `True`.
+
+## 3. Test-WaNo Inputs files 
+   - The `figure.png` image is the mandatory output of this WaNo
+## 4. Report
+   - By clicking with the right mouse button on the executed workflow folder we can choose the show report option, to visualize our pre-defined report.
 
