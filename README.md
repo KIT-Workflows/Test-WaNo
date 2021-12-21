@@ -39,5 +39,6 @@ Other local environments are allowed but have to be changed accordingly in the r
 
 ## License & copyright
 © Celso R. C. Rêgo
+
 Licensed under the [MIT License](LICENSE).
 
