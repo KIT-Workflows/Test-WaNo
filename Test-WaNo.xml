@@ -14,6 +14,9 @@
   </WaNoMeta>
 
    <WaNoRoot name="Test-WaNo">
+
+      <WaNoString name="MyString">set string here</WaNoString >
+
       
       <WaNoFloat name="Float-var-0">50.0</WaNoFloat>
       <WaNoInt name="Int-var-0">20</WaNoInt>
@@ -32,6 +35,7 @@
          <Entry id="1">option-1</Entry>
          <Entry id="2">option-2</Entry>
       </WaNoDropDown>
+ 
 
       <WaNoDictBox name="simple-Dictbox">
          <WaNoInt name="start">1</WaNoInt>
@@ -51,14 +55,12 @@
 
    </WaNoRoot>
    <WaNoExecCommand>
-      export NANOVER=V4
-	   source $NANOMATCH/$NANOVER/local_anaconda/bin/activate
-	   conda activate simstack_kit
-		python test-script.py
+      bash config.sh
    </WaNoExecCommand>
    
    <WaNoInputFiles> 
-      <WaNoInputFile logical_filename="test-script.py">test-script.py</WaNoInputFile> 
+      <WaNoInputFile logical_filename="test-script.py">test-script.py</WaNoInputFile>
+      <WaNoInputFile logical_filename="config.sh">config.sh</WaNoInputFile> 
       <WaNoInputFile logical_filename="report_template.body">report_template.body</WaNoInputFile>
    </WaNoInputFiles>
    
