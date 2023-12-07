@@ -19,10 +19,7 @@ To get this WaNo up running on your available computational resources, make sure
 The python scripts run with the `simstack_kit` conda environment defined in the `WaNoExecCommand` tag as shown below. 
 ```
 <WaNoExecCommand>
-   export NANOVER=V4
-   source $NANOMATCH/$NANOVER/local_anaconda/bin/activate
-   conda activate simstack_kit
-   python test-script.py
+   bash config.sh
 </WaNoExecCommand>
 ```
 Other local environments are allowed but have to be changed accordingly in the respective tag of the `Test-WaNo.xml` file.
